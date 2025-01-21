@@ -21,6 +21,7 @@ public class NMSItemStack {
 
     static Class ItemsClass;
     static Class IMaterialClass;
+    static Class ResourceLocationClass;
 
 //    static Constructor ItemStackClassConstructor;
     static Class NBTTagCompoundClass;
@@ -50,6 +51,7 @@ public class NMSItemStack {
         IMaterialClass=CraftUtils.getMinecraftClass("IMaterial");
         ItemClass=CraftUtils.getMinecraftClass("Item");
         ItemsClass=CraftUtils.getMinecraftClass("Items");
+        ResourceLocationClass = CraftUtils.getMinecraftClass("ResourceLocation");
         Class PlayerInventoryClass = Class.forName("org.bukkit.inventory.PlayerInventory");
         try {
             GetItemInHand = PlayerInventoryClass.getDeclaredMethod("getItemInMainHand");

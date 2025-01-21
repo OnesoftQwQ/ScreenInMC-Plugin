@@ -52,7 +52,7 @@ public class NMSItemStackNew extends NMSItemStack{
             }
         }
         if(DataComponentHolderGetComponents==null) throw new Exception("public Object set(DataComponentType dataComponentType, Object t) not found");
-        Class ResourceLocationClass = CraftUtils.getMinecraftClass("ResourceLocation");
+        Class ResourceLocationClass = NMSItemStack.ResourceLocationClass;
         try {
             ResourceLocationConstructor = ResourceLocationClass.getDeclaredConstructor(String.class);
         }catch (Exception e){
